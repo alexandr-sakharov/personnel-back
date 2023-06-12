@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-01-19-14-33-create-acl-roles
+      author: aa-sakharov
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: status_code
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role_code
+                  type: varchar
+              - column:
+                  name: role_name
+                  type: varchar
+              - column:
+                  name: is_default
+                  type: int
+            remarks: Роли пользователя
+            tableName: acl_roles

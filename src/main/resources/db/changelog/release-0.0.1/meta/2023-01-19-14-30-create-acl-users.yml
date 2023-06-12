@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-01-19-14-30-create-acl-users
+      author: aa-sakharov
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar
+              - column:
+                  name: created_at
+                  type: timestamp
+            remarks: Пользователи
+            tableName: acl_users

@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-01-19-15-14-insert-into-roles-resources
+      author: aa-sakharov
+      changes:
+        - insert:
+            tableName: acl_roles_resources
+            columns:
+              - column:
+                  name: resource_id
+                  value: 1
+              - column:
+                  name: role_id
+                  value: 1
+              - column:
+                  name: access_kind
+                  value: rw
+        - insert:
+            tableName: acl_roles_resources
+            columns:
+              - column:
+                  name: resource_id
+                  value: 1
+              - column:
+                  name: role_id
+                  value: 2
+              - column:
+                  name: access_kind
+                  value: rw
+        - insert:
+            tableName: acl_roles_resources
+            columns:
+              - column:
+                  name: resource_id
+                  value: 2
+              - column:
+                  name: role_id
+                  value: 1
+              - column:
+                  name: access_kind
+                  value: rw

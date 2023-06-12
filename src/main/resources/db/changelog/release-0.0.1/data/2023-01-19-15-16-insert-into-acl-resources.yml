@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-01-19-15-16-insert-into-acl-resources
+      author: aa-sakharov
+      changes:
+        - insert:
+            tableName: acl_resources
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: resource_code
+                  value: base
+              - column:
+                  name: title
+                  value: Базовые права
+        - insert:
+            tableName: acl_resources
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: resource_code
+                  value: administrator
+              - column:
+                  name: title
+                  value: Права администратора

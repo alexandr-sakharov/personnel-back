@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - include:
+      file: "/meta/2023-01-19-14-30-create-acl-users.yml"
+      relativeToChangelogFile: true
+  - include:
+      file: "/meta/2023-01-19-14-33-create-acl-roles.yml"
+      relativeToChangelogFile: true
+  - include:
+      file: "/meta/2023-01-19-14-35-create-acl-resources.yml"
+      relativeToChangelogFile: true
+  - include:
+      file: "/meta/2023-01-19-14-40-create-acl-roles-resources.yml"
+      relativeToChangelogFile: true
+  - include:
+      file: "/meta/2023-01-19-14-42-create-acl-users-roles.yml"
+      relativeToChangelogFile: true

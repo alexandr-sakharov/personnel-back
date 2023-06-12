@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-01-19-15-13-insert-into-acl-roles
+      author: aa-sakharov
+      changes:
+        - insert:
+            tableName: acl_roles
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: role_code
+                  value: system_administrator
+              - column:
+                  name: status_code
+                  value: active
+              - column:
+                  name: role_name
+                  value: Системный администратор
+              - column:
+                  name: is_default
+                  value: 0
+        - insert:
+            tableName: acl_roles
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: role_code
+                  value: usr
+              - column:
+                  name: status_code
+                  value: active
+              - column:
+                  name: role_name
+                  value: Обычный пользователь
+              - column:
+                  name: is_default
+                  value: 1

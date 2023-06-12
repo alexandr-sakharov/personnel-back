@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2022-10-13-10-47-insert-into-acl-users
+      author: aa-sakharov
+      insert:
+          tableName: acl_users
+          columns:
+            - column:
+                name: username
+                value: admin
+            - column:
+                name: password
+                value: Admin1234
+            - column:
+                name: created_at
+                valueComputed: now()

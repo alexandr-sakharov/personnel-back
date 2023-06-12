@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-01-19-14-40-create-acl-roles-resources
+      author: aa-sakharov
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: resource_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_resources_roles_resources
+                    references: acl_resources(id)
+              - column:
+                  name: role_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_roles_roles_resources
+                    references: acl_roles(id)
+              - column:
+                  name: access_kind
+                  type: varchar(2)
+            remarks: Роли-ресурсы
+            tableName: acl_roles_resources

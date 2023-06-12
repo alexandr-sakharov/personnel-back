@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-01-19-14-42-create-acl-users-roles
+      author: aa-sakharov
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_users_users_roles
+                    references: acl_users(id)
+              - column:
+                  name: role_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_roles_users_roles
+                    references: acl_roles(id)
+            remarks: Пользователи-Роли
+            tableName: acl_users_roles

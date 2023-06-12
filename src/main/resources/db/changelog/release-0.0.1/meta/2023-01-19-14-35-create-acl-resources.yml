@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2023-01-19-14-35-create-acl-resources
+      author: aa-sakharov
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: resource_code
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+            remarks: Ресурсы пользователя
+            tableName: acl_resources

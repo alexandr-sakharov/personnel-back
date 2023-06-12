@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2022-10-13-10-55-insert-into-users-roles
+      author: aa-sakharov
+      insert:
+          tableName: acl_users_roles
+          columns:
+            - column:
+                name: user_id
+                value: 1
+            - column:
+                name: role_id
+                value: 1

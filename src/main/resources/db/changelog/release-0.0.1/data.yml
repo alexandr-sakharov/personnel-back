@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - include:
+      file: "/data/2023-01-19-15-13-insert-into-acl-roles.yml"
+      relativeToChangelogFile: true
+  - include:
+      file: "/data/2023-01-19-15-16-insert-into-acl-resources.yml"
+      relativeToChangelogFile: true
+  - include:
+      file: "/data/2023-01-19-15-14-insert-into-roles-resources.yml"
+      relativeToChangelogFile: true
+  - include:
+      file: "/data/2023-01-19-15-49-insert-into-acl-users.yml"
+      relativeToChangelogFile: true
+  - include:
+      file: "/data/2023-01-19-15-50-insert-into-users-roles.yml"
+      relativeToChangelogFile: true
+
+
+
+
+
+
